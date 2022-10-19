@@ -30,6 +30,10 @@ public class Product {
          p.setPrice(p.getPrice() * 1.1);
     }
 
+    public void nonStaticProductConsumer() {
+         setPrice(price * 1.1);
+    }
+
     @Override
     public String toString() {
         return name +

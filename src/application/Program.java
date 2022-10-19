@@ -19,7 +19,7 @@ public class Program {
 
         Double min = 100.0;
 
-        list.forEach(Product::staticProductConsumer);
+        list.forEach(Product::nonStaticProductConsumer);
         list.forEach(System.out::println);
 
     }
