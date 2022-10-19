@@ -5,6 +5,7 @@ import src.util.PriceUpdate;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class Program {
 
@@ -17,9 +18,9 @@ public class Program {
         list.add(new Product("Xbox", 1190.99 ));
         list.add(new Product("Keyboard", 90.99 ));
 
-        Double min = 100.0;
+        Consumer<Product> cons = p -> p.setPrice(p.getPrice() * 1.1);
 
-        list.forEach(Product::nonStaticProductConsumer);
+        list.forEach(cons);
         list.forEach(System.out::println);
 
     }
