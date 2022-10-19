@@ -1,6 +1,8 @@
-package application;
+package src.application;
 
-import entities.Product;
+import src.entities.Product;
+import src.util.PriceUpdate;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,11 +19,8 @@ public class Program {
 
         Double min = 100.0;
 
-        list.removeIf(p -> p.getPrice() >= min);
-
-        for ( Product p: list){
-            System.out.println(p);
-        }
+        list.forEach(new PriceUpdate());
+        list.forEach(System.out::println);
 
     }
 }

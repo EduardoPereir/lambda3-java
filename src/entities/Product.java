@@ -1,4 +1,4 @@
-package entities;
+package src.entities;
 
 public class Product {
 
@@ -37,6 +37,6 @@ public class Product {
     @Override
     public String toString() {
         return name +
-                ", " + price;
+                ", " + String.format("%.2f", price);
     }
 }
